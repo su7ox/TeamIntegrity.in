@@ -1,0 +1,933 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1B1C21;
+    margin-top: 0;
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    left: -50%;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3) 50%, transparent 50%);
+    z-index: -1;
+}
+
+.navbar-brand img {
+    object-fit: fill;
+    margin: 1px 1px;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1;
+}
+
+
+ul{
+    list-style: none;
+}
+
+/* Navbar styles for phone view */
+@media (max-width: 810px) {
+    body {
+        overflow-x: hidden;
+        white-space: normal;
+    }
+    .main{
+        background-image: url(asset/phonebackground.jpg);
+    }
+    .navbar-toggler-icon {
+        font-size: large;
+        
+    }
+    
+    .navbar-nav {
+        font-weight: bolder;
+        /* color: #ff0404; */
+        background-color: #0066ff28;
+        border-radius: 20px;
+        padding-bottom: 2px;
+        /* margin-left: 25%; */
+        align-items: center;
+        align-content: center;
+    }
+    
+    .navbar-nav .nav-item .nav-link {
+        color: #f40808;
+        text-transform: uppercase;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        color: #00aaff;
+    }
+    .btn{
+        border-radius: 20px;
+    }
+    
+    .about-us {
+        display: grid;
+        grid-template-areas: "imgs" "contents";
+        background-color: rgba(9, 9, 9, 0.16);
+        border-radius: 20px;
+        color: #fff;
+        width: auto;
+        padding: 20px;
+        overflow-x: auto;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    .about-img {
+        align-items: center;
+        align-content: center;
+        /* margin-right: 40vw; */
+        grid-area: imgs;
+        /* background-color: #0066ff; */
+        padding-left: 25%;
+        padding-bottom: 20px;
+    }
+
+    .about {
+        grid-area: contents;
+    }
+
+    .about h2 {
+        font-size: 2.3rem;
+        font-family: 'Reem Kufi Fun', sans-serif;
+    }
+
+    .jumbotron,
+    .navbar {
+        /* background-image: url(asset/headernavbackground.jpg); */
+        background-size: cover;
+        background-position: center;
+        background-color: #2c2f305b;
+    }
+
+    .navbar-brand {
+        background: none;
+    }
+
+    .nav-link a {
+        color: #fff;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        color: #fff !important;
+        text-transform: uppercase;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        color: #007bff !important;
+    }
+
+    .jumbotron {
+        height: auto !important;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 46px !important;
+        margin-top: 80px !important;
+        font-weight: bold;
+        text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.8) !important;
+        color: #ffffff;
+    }
+
+    .jumbotron .typed-text {
+        font-size: 50px;
+        color: #0890f8;
+        font-family: 'Reem Kufi Fun', sans-serif;
+        font-weight: bolder !important;
+    }
+
+    .typed-cursor {
+        font-size: 18px !important;
+        color: #fff;
+    }
+
+    svg {
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    #ast-scroll-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+    }
+
+    #ast-scroll-top.show {
+        display: block;
+    }
+
+    .workingspace {
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        color: #fff;
+        width: 70vw;
+        margin: 10px;
+        overflow-x: auto;
+        gap: 30px;
+    }
+
+    #creators {
+        color: white;
+        font-family: 'Reem Kufi Fun', sans-serif;
+        background-color: rgba(73, 72, 72, 0.273);
+        margin: 5px;
+        padding: 10px;
+        border-radius: 20px;
+        overflow-x: auto;
+        white-space: nowrap; 
+        scroll-snap-type: x mandatory; 
+    }
+    #creators h2{
+        font-size: 2.3rem;
+    }
+    #creators span{
+        font-size: 2.0rem;
+    }
+    .ccs{
+        /* display: flex; */
+        /* flex-direction: row; */
+        align-items: center;
+        text-align: center;
+        align-content: center;
+    }
+    .ccs img{
+        width: 50%;
+    }
+    .leftright{
+        margin-top: 20vh;
+        padding: 30px;
+    }
+    .firstrow-workspace {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        width: max-content; 
+        scroll-snap-type: x mandatory; 
+        overflow-x: auto; 
+        scrollbar-width: thin; 
+    }
+    
+    
+    .firstrow-workspace {
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; 
+    }
+    
+
+    .firstrow-workspace::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    .firstrow-workspace::-webkit-scrollbar-thumb {
+        background-color: #555;
+        border-radius: 4px;
+    }
+    
+    .firstrow-workspace::-webkit-scrollbar-track {
+        background-color: rgba(73, 72, 72, 0.273);
+    }
+    
+
+    .one-cc {
+        background-color: rgba(73, 72, 72, 0.273);
+        text-align: center;
+        align-items: center;
+        border-radius: 20px;
+        padding: 5px;
+    }
+
+    .one-cc img {
+        width: 40vw;
+        border-radius: 50%;
+        padding: 5px;
+    }
+
+    .socialhandels {
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+    #creators {
+        color: white;
+        font-family: 'Reem Kufi Fun', sans-serif;
+        background-color: rgba(73, 72, 72, 0.273);
+        margin: 5px;
+        padding: 10px;
+        border-radius: 20px;
+        overflow-x: auto;
+        white-space: nowrap; 
+        scroll-snap-type: x mandatory; 
+    }
+    #creators h2{
+        font-size: 2.3rem;
+    }
+    #creators span{
+        font-size: 2.0rem;
+    }
+    .ccs{
+        /* display: flex; */
+        /* flex-direction: row; */
+        align-items: center;
+        text-align: center;
+        align-content: center;
+    }
+    .ccs img{
+        width: 50%;
+    }
+    .leftright{
+        margin-top: 20vh;
+        padding: 30px;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+        line-height: 1.5;
+        font-family: 'Poppins', sans-serif;
+    }
+    .footer-col{
+        margin-left: 70px;
+    }
+    .footer-col img{
+       /* margin: 0vh 20vw; */
+       margin-bottom: 5vh;
+       
+       width: 230px;
+    }
+    .footer {
+        background-color: #24262b;
+        padding: 30px 0;
+        margin-top: 100px;
+        /* margin: 20px; */
+    }
+   .footer p{
+        color: #bbbbbb;
+        text-align: center;
+    }
+    .footer-col {
+        width: 25%;
+        padding: 0 15px;
+    }
+    .upperfooter{
+        display: flex;
+        gap: 20px;
+    }
+    .footer-col h4 {
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 20px; 
+        font-weight: 500;
+        position: relative;
+    }
+    
+    .footer-col h4::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #1e91e9;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    
+    .footer-col ul li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    
+    .footer-col ul li a {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+    }
+    
+    .footer-col ul li a:hover {
+        color: #bbf4e7;
+    }
+    
+    .footer-col .social-links a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+    }
+    
+    .footer-col .social-links a:hover {
+        color: #24262b;
+        background-color: #9fdffa;
+    }
+    
+    .copyright{
+        padding-top: 10px;
+        color: #bbbbbb;
+        font-size: small;
+    }
+}
+
+/* Navbar styles for desktop view */
+@media (min-width: 811px) {
+    .navbar-brand {
+        font-size: 2.1em;
+        font-weight: bolder;
+        letter-spacing: 1px;
+    }
+
+    .jumbotron {
+        position: relative;
+        height: 540px;
+        margin-top: 0;
+        text-align: center;
+        overflow: hidden;
+        background-image: url(https://img.freepik.com/free-vector/abstract-blue-light-pipe-speed-zoom-black-background-technology_1142-9530.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .jumbotron::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: -1;
+    }
+
+    .jumbotron .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .jumbotron .display-4 {
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: 150px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .jumbotron .display-4 span {
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    .typed-text {
+        display: inline-block;
+    }
+
+    @keyframes typedjsBlink {
+        0% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .text-blue-700 {
+        color: #20a6ff;
+        font-weight: bolder;
+    }
+
+    .dark .text-blue-600 {
+        color: #20a6ff;
+    }
+
+    .jumbotron::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+        position: absolute;
+        bottom: 0;
+    }
+
+    .jumbotron .display-4 {
+        color: white;
+        margin-top: 150px;
+        font-weight: bold;
+        text-shadow: 1px 1px 0.5px rgba(125, 124, 124, 0.8);
+        font-size: 40px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .font-reem-kufi-fun {
+        font-family: 'Reem Kufi Fun', sans-serif;
+    }
+
+    #ast-scroll-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        display: none;
+    }
+
+    #ast-scroll-top.show {
+        display: block;
+    }
+
+    .about-us {
+        display: grid;
+        grid-template-areas: "contents imgs";
+        background-color: rgba(9, 9, 9, 0.16);
+        margin: 2vh 4vw;
+        border-radius: 20px;
+    }
+
+    .about {
+        grid-area: contents;
+    }
+
+    .about-img {
+        text-align: center;
+        align-items: center;
+        margin: 40px 40px;
+        margin-top: 38vh;
+        grid-area: imgs;
+    }
+
+    .about-img img {
+        width: 200px;
+    }
+
+    .about {
+        padding: 30px 20px;
+        color: #459dfc;
+        font-size: 1.5rem;
+    }
+
+    .about h2 {
+        font-family: 'Reem Kufi Fun', sans-serif;
+        font-weight: bold;
+        font-size: 3.2rem;
+        color: #0066ff;
+    }
+
+    .text a {
+        text-decoration: none;
+        color: aquamarine;
+    }
+
+    .text a:hover {
+        text-decoration: none;
+        color: rgb(2, 247, 255);
+    }
+
+    .display-4 {
+        width: 100%;
+        white-space: nowrap;
+        margin: 0 auto;
+    }
+
+    .jumbotron .display-4 span {
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    .typed-text {
+        display: inline-block;
+    }
+
+    .workingspace {
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        color: #fff;
+        width: 70vw;
+        margin: 10px;
+        overflow-x: auto;
+        gap: 30px;
+    }
+
+    #creators {
+        color: white;
+        font-family: 'Reem Kufi Fun', sans-serif;
+        background-color: rgba(73, 72, 72, 0.273);
+        margin: 10px;
+        padding: 20px;
+        border-radius: 20px;
+        position: relative; 
+    }
+    
+    #creators h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    #gallery {
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .swiper-slide {
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .ccs {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+    }
+    
+    .ccs img {
+        width: 250px; 
+        border-radius: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .ccs h3 {
+        font-size: 2.2rem;
+        margin: 10px 0;
+    }
+    .swiper-slide span{
+        font-size: 2rem;
+        /* display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        text-align: center; */
+    }
+    .ccs p {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+    
+    .leftright {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        z-index: 1; 
+    }
+    
+    .swiper-button-next.leftright {
+        right: 20px;
+    }
+    
+    .swiper-button-prev.leftright {
+        left: 20px;
+    }
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+    body {
+        line-height: 1.5;
+        font-family: 'Poppins', sans-serif;
+    }
+    .footer-col{
+        margin-left: 70px;
+    }
+    .footer-col img{
+       /* margin: 0vh 20vw; */
+       margin-bottom: 5vh;
+       
+       width: 230px;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .containerF {
+        max-width: 1070px;
+        margin: auto;
+        
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .upperfooter{
+        /* background-color: #0066ff; */
+        display: flex;
+        gap: 1600px;
+        align-items: center;
+        margin-left: 10vw;
+        padding-bottom: 5vh;;
+    }
+    .navbbar ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+    .navbbar ul li a{
+        font-size: large;
+        font-weight: bolder;
+        color: #007bff;
+    }
+
+    .footer {
+        background-color: #24262b;
+        padding: 30px 0;
+        margin-top: 100px;
+        /* margin: 20px; */
+    }
+   .footer p{
+        color: #bbbbbb;
+        text-align: center;
+    }
+    .footer-col {
+        width: 25%;
+        padding: 0 15px;
+    }
+    .upperfooter{
+        display: flex;
+        gap: 20px;
+    }
+    .footer-col h4 {
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 20px; 
+        font-weight: 500;
+        position: relative;
+    }
+    
+    .footer-col h4::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #1e91e9;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    
+    .footer-col ul li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    
+    .footer-col ul li a {
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+    }
+    
+    .footer-col ul li a:hover {
+        color: #bbf4e7;
+    }
+    
+    .footer-col .social-links a {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all 0.5s ease;
+    }
+    
+    .footer-col .social-links a:hover {
+        color: #24262b;
+        background-color: #9fdffa;
+    }
+    
+    .copyright{
+        padding-top: 10px;
+        color: #bbbbbb;
+    }
+
+
+    
+    .tombol {
+        text-transform: uppercase;
+        border-radius: 40px;
+    }
+
+    .navbar-brand,
+    .nav-link {
+        color: white !important;
+        text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+    }
+
+    .nav-link {
+        text-transform: uppercase;
+        margin-right: 30px;
+        color: white !important;
+    }
+
+    .nav-link:hover::after {
+        content: '';
+        display: block;
+        /* border-bottom: 3px solid #0b62dc00; */
+        width: 50%;
+        color: beige;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
+    .jumbotron {
+        margin-top: -75px;
+        height: 640px;
+    }
+
+    .jumbotron .display-4 {
+        font-size: 62px;
+    }
+
+    .workingspace {
+        text-align: left;
+    }
+
+    .testimonial h5 {
+        font-size: 32px;
+    }
+
+    .col p a {
+        text-decoration: none;
+        color: rgb(157, 185, 255);
+    }
+}
+
+#ast-scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#ast-scroll-top.show {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .social-links{
+        padding-right: 100px;
+        color: #dbe1eb;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+    }
+    .social-links{
+        padding-right: 20px;
+        color: #dbe1eb;
+    }
+    .navbar {
+        padding: 15px;
+    }
+
+    .navbar-brand {
+        font-size: 1.8em;
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 15px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.1em;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+}
+
+@media (min-width: 811px) and (max-width: 997px) {
+    .navbar {
+        background-color: #333;
+        padding: 15px;
+    }
+
+    .navbar-brand {
+        font-size: 1.8em;
+    }
+    .jumbotron,
+    .navbar {
+    background-image: url(asset/headernavbackground.jpg);
+    background-size: cover;
+    background-position: center;
+    }
+    .navbar-nav .nav-item {
+        margin-right: 15px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.1em;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+}

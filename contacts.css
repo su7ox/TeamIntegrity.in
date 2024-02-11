@@ -1,0 +1,118 @@
+body {
+  display: flex;
+  background-color: rgb(32, 32, 32);
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  margin: 0;
+}
+
+body:before {
+  content: "";
+  position: absolute;
+  left: -50%;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3) 50%, transparent 50%);
+  z-index: -1;
+}
+
+.card {
+  padding: 9px;
+  margin: 10vh 5vw;
+  width: 90vw;
+  height: 59vh;
+  background-color: #9a9a9a89;
+  border-radius: 20px;
+  box-shadow: rgb(28, 28, 246) 0px 50px 100px -20px, rgb(32, 138, 243) 0px 30px 60px -30px, rgb(16, 65, 114) 0px -2px 6px 0px inset;
+}
+
+.gmail a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 520;
+  font-size: 1.5em;
+}
+
+.gmail a:hover {
+  color: rgb(115, 199, 255);
+}
+
+.gmail i {
+  width: 20px;
+}
+
+.card-overlay {
+  color: rgb(52, 2, 250);
+  margin-top: 12px;
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.socialhandels {
+  margin-top: 12px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas: "insta discord" "youtube twitter";
+  place-content: center;
+  gap: 20px; 
+  padding: 13px;
+}
+
+
+.socialhandels a {
+  color: #00ccff;
+}
+
+.item1 i:hover {
+  color: rgba(253, 27, 238, 0.796);
+}
+
+.item2 i:hover {
+  color: rgb(41, 18, 248);
+}
+
+.item4 i:hover {
+  color: rgba(239, 19, 19, 0.894);
+}
+ 
+.item5 i:hover {
+  color: rgba(31, 166, 249, 0.952);
+}
+
+.socialhandels i {
+  color: rgb(0, 0, 0);
+  font-size: 5em;
+}
+
+@media (max-width: 810px) {
+  .card {
+    font-family: 'Reem Kufi Fun', sans-serif;
+      margin: 10vh 5vw;
+      width: 90vw;
+      height: 59vh;
+      font-size: 60%;
+  }
+  .socialhandels {
+    gap: 80px;
+    font-size: 1.2rem ; 
+}
+.socialhandels .insta:hover a {
+  color: rgba(253, 27, 238, 0.796);
+}
+
+.socialhandels .discord:hover a {
+  color: rgb(41, 18, 248);
+}
+
+.socialhandels .youtube:hover a {
+  color: rgba(239, 19, 19, 0.894);
+}
+
+.socialhandels .twitter:hover a {
+  color: rgba(31, 166, 249, 0.952);
+}
+
+}
