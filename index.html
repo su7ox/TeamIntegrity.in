@@ -81,16 +81,19 @@
                 href="https://www.instagram.com/anthem_codm/" class="text-blue-100">@anthem_codm</a></span></p>
         </div>
 
-        Join us as we redefine esports in South Asia and beyond. #TeamIntegrity #Esports #SouthAsiaGaming</p>
+        Join us as we redefine esports in South Asia and beyond. #TeamIntegrity #Esports #SouthAsiaGaming</p
+        >
       </div>
       <div class="about-img">
         <img src="asset/logo-removebg-preview.png" alt="">
       </div>
     </div>
-<br><br>
+      <br><br>
 
       <div id="creators">
-      <h1>Content Creators</h1><br>
+      <h1>Content Creators</h1>
+      <br>
+
       <div class="ccs">
       <div id="gallery" class="swiper-container">
         <div class="swiper-wrapper">
@@ -98,49 +101,40 @@
                 <img src="asset/tony.png" alt="Image 1">
                 <H3>Tony CODM</H3>
                 <p>FOUNDER</p>
-                <span>
-                <div class="insta item1">
-                  <a href="https://www.instagram.com/teamintegrity.in/">
+                <div class="sociallinks">
+                  <a href="https://www.instagram.com/ig.tony._/">
                     <i class="fa-brands fa-instagram"></i>
-                  </a>
-                </div></span>
-                <span><div class="youtube item4">
-                  <a href="https://youtube.com/@TeamIntegrity?si=dLGjragVUQRw_p1u">
+                  </a>&nbsp;&nbsp;&nbsp;
+                  <a href="https://l.instagram.com/?u=https%3A%2F%2Fyoutube.com%2F%40TonyFTW_3000&e=AT0DjV-zdxwmHVZF-UxDkJfgzyoCp8e-ksZBeeD1QKqEaz-gHplcGYPQsCDWKXEe94ELvzKTlVI-WEo9KKzRn5IgtIYhZMDzJlO3Bw">
                     <i class="fa-brands fa-youtube"></i>
-                  </a>
-                </div></span>
+                  </a>                
+              </div>
             </div>
             <div class="swiper-slide">
                 <img src="asset/erasecodm.png" alt="Image 2">
                 <H3>Erase CODM</H3>
                 <p>FOUNDER</p>
-                <span>
-                <div class="insta item1">
-                  <a href="https://www.instagram.com/teamintegrity.in/">
+                <div class="sociallinks">
+                  <a href="https://www.instagram.com/ig_eraser/">
                     <i class="fa-brands fa-instagram"></i>
-                  </a>
-                </div></span>
-                <span><div class="youtube item4">
-                  <a href="https://youtube.com/@TeamIntegrity?si=dLGjragVUQRw_p1u">
+                  </a>&nbsp;&nbsp;&nbsp;
+                  <!-- <a href="https://youtube.com/@TeamIntegrity?si=dLGjragVUQRw_p1u">
                     <i class="fa-brands fa-youtube"></i>
-                  </a>
-                </div></span>
+                  </a>                 -->
+              </div>
             </div>
             <div class="swiper-slide">
               <img src="asset/god-scorpio.png" alt="Image 2">
               <H3>God Scorpio</H3>
                 <p>CO-FOUNDER</p>
-                <span>
-                <div class="insta item1">
-                  <a href="https://www.instagram.com/teamintegrity.in/">
+                <div class="sociallinks">
+                  <a href="https://www.instagram.com/ig_godscorpio/">
                     <i class="fa-brands fa-instagram"></i>
-                  </a>
-                </div></span>
-                <span><div class="youtube item4">
-                  <a href="https://youtube.com/@TeamIntegrity?si=dLGjragVUQRw_p1u">
+                  </a>&nbsp;&nbsp;&nbsp;
+                  <!-- <a href="https://youtube.com/@TeamIntegrity?si=dLGjragVUQRw_p1u">
                     <i class="fa-brands fa-youtube"></i>
-                  </a>
-                </div></span>
+                  </a>                 -->
+              </div>
           </div>
             
         </div>
@@ -148,6 +142,10 @@
         <div class="swiper-button-prev leftright "></div>
     </div>
   </div>
+  <br><br>
+  <div class="viewallcc"><a href="contentc.html#ccpage" target="_blank"> View All</a></div>
+      
+ 
     </div>
 
 
@@ -179,7 +177,7 @@
           <div class="footer-col">
             <h4>Mail</h4>
             <ul>
-              <li><a href="#">mail.gmail.com</a></li>
+              <li><a href="#" style="text-transform: lowercase;">contact.teamintegrity@gmail.com</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -238,7 +236,31 @@
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js" integrity="sha384-Y3M0OLr5HE4VJm4JLEjS3G9a+bJlI1fkQGcPRcpGRDHSjwjPLBqu0p6HI8zBJYp2" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy8NYL4FRMkL5cFf83N3C86pckE2J6RL5M" crossorigin="anonymous"></script>
-
+    <script>
+       var swiper = new Swiper('#gallery', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    
+});
+    </script>
+    <script>
+      window.addEventListener('scroll', function () {
+  var scrollButton = document.getElementById('ast-scroll-top');
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollButton.classList.add('show');
+  } else {
+    scrollButton.classList.remove('show');
+  }
+});
+document.getElementById('ast-scroll-top').addEventListener('click', function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+    </script>
    <script>
        var swiper = new Swiper('#gallery', {
            slidesPerView: 1,
@@ -249,6 +271,35 @@
            },
            
        });
+   </script>
+  
+    
+  <script>
+  function loadAndScroll(htmlFile, targetDiv) {
+    // Load the external HTML file using AJAX
+    $.ajax({
+      url: htmlFile,
+      type: 'GET',
+      success: function (data) {
+        // Extract the content of the target div from the loaded HTML
+        var targetContent = $(data).find('#' + targetDiv).html();
+
+        // Create a new HTML document with the target content
+        var newDocument = '<!DOCTYPE html><html><head></head><body>' + targetContent + '</body></html>';
+
+        // Open the new document in a new window or tab
+        var newWindow = window.open();
+        newWindow.document.write(newDocument);
+      },
+      error: function () {
+        console.error('Error loading ' + htmlFile);
+      }
+    });
+  }
+</script>
+
+</script>
+
    </script>
 </body>
 
